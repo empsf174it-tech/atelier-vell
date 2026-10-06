@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Atelier Vell</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body style="display:flex; flex-direction:column; min-height:100vh;">
+
+  <div style="flex:1; display:flex; align-items:center; justify-content:center; padding:var(--space-4); background-color:var(--clr-secondary);">
+    <div style="width:100%; max-width:400px; background:var(--clr-white); padding:var(--space-6) var(--space-4); border:1px solid var(--clr-border); box-shadow:var(--shadow);">
+      <div style="text-align:center; margin-bottom:var(--space-5);">
+        <a href="index.html" class="brand" style="display:block; margin-bottom:var(--space-2);">Atelier Vell</a>
+        <h1 style="font-size:1.5rem;">Welcome Back</h1>
+      </div>
+
+      <form id="login-form">
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" id="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Password</label>
+          <input type="password" id="password" class="form-control" required minlength="8">
+        </div>
+        
+        <button type="submit" class="btn btn-primary btn-block" style="margin-bottom:var(--space-3);">Login</button>
+      </form>
+
+      <div style="text-align:center; margin:var(--space-3) 0; position:relative;">
+        <span style="background:var(--clr-white); padding:0 8px; color:var(--clr-text-light); position:relative; z-index:2; font-size:0.8rem; text-transform:uppercase;">Or</span>
+        <div style="position:absolute; top:50%; left:0; width:100%; height:1px; background:var(--clr-border); z-index:1;"></div>
+      </div>
+
+      <button class="btn btn-outline btn-block" style="margin-bottom:var(--space-4);" type="button" onclick="showToast('Google sign-in is a placeholder in this demo', 'ph-info')">
+        <svg class="google-icon" viewBox="0 0 48 48" width="18" height="18" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.1H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.6-.4-3.9z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.1H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.6-.4-3.9z"/></svg> Continue with Google
+      </button>
+
+      <p style="text-align:center; font-size:0.9rem;">
+        Don't have an account? <a href="register.html" class="auth-link">Register</a>
+      </p>
+      
+      <div style="text-align:center; margin-top:24px; font-size:0.75rem; color:var(--clr-text-light); display:flex; align-items:center; justify-content:center; gap:4px;">
+        <i class="ph ph-lock-key"></i> Secure Connection (Demo)
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/auth.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const pass = document.getElementById('password').value;
+      window.AtelierAuth.login(email, pass);
+    });
+  </script>
+</body>
+</html>
