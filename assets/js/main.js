@@ -38,6 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Highlight the current page in the drawer
+  if (drawer) {
+    const page = location.pathname.split('/').pop() || 'index.html';
+    const isShop = page === 'shop.html' || page === 'product-detail.html';
+
+    drawer.querySelectorAll('a.mobile-nav-link').forEach(link => {
+      if (link.getAttribute('href') === page) {
+        link.classList.add('active');
+        link.setAttribute('aria-current', 'page');
+      }
+    });
+
+    const shopToggle = drawer.querySelector('.mobile-dropdown-toggle');
+    if (isShop && shopToggle) {
+      shopToggle.classList.add('active');
+      if (page === 'shop.html') {
+        const category = new URLSearchParams(location.search).get('category');
+        const target = category ? `shop.html?category=${category}` : 'shop.html';
+        const subLink = [...drawer.querySelectorAll('.mobile-dropdown-link')]
+          .find(a => a.getAttribute('href') === target);
+        if (subLink) {
+          subLink.classList.add('active');
+          subLink.setAttribute('aria-current', 'page');
+          shopToggle.click(); // reveal the active category
+        }
+      }
+    }
+  }
+
   // Cart Count Badge
   const updateCartCount = () => {
     const cart = window.AtelierStore.getCart();

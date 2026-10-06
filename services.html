@@ -20,11 +20,15 @@
           <a href="shop.html" class="nav-link">Shop</a>
           <div class="dropdown-menu">
             <a href="shop.html?category=totes" class="dropdown-link">Totes</a>
+            <a href="shop.html?category=crossbody" class="dropdown-link">Crossbody</a>
+            <a href="shop.html?category=clutches" class="dropdown-link">Clutches</a>
+            <a href="shop.html?category=backpacks" class="dropdown-link">Backpacks</a>
           </div>
         </div>
         <a href="collections.html" class="nav-link">Collections</a>
         <a href="services.html" class="nav-link active">Services</a>
         <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
         <a href="dashboard.html" class="nav-link">Dashboard</a>
       </nav>
       <div class="nav-actions">
@@ -37,7 +41,36 @@
   </header>
   <!-- Drawer -->
   <div class="drawer-overlay"></div>
-  <div class="mobile-drawer"><div class="drawer-close"><i class="ph ph-x"></i></div></div>
+  <div class="mobile-drawer">
+    <div class="drawer-header">
+      <span class="brand">Atelier Vell</span>
+      <button class="drawer-close" aria-label="Close menu"><i class="ph ph-x"></i></button>
+    </div>
+    <div class="drawer-body">
+      <a href="index.html" class="mobile-nav-link">Home</a>
+      <div style="border-bottom: 1px solid var(--clr-border);">
+        <button class="mobile-nav-link mobile-dropdown-toggle" style="border:none; background:none; text-align:left;">
+          Shop <i class="ph ph-caret-down"></i>
+        </button>
+        <div class="mobile-dropdown-menu">
+          <a href="shop.html" class="mobile-dropdown-link">All Bags</a>
+          <a href="shop.html?category=totes" class="mobile-dropdown-link">Totes</a>
+          <a href="shop.html?category=crossbody" class="mobile-dropdown-link">Crossbody</a>
+          <a href="shop.html?category=clutches" class="mobile-dropdown-link">Clutches</a>
+          <a href="shop.html?category=backpacks" class="mobile-dropdown-link">Backpacks</a>
+        </div>
+      </div>
+      <a href="collections.html" class="mobile-nav-link">Collections</a>
+      <a href="services.html" class="mobile-nav-link">Services</a>
+      <a href="about.html" class="mobile-nav-link">About</a>
+      <a href="contact.html" class="mobile-nav-link">Contact</a>
+      <a href="dashboard.html" class="mobile-nav-link">Dashboard</a>
+
+      <div style="margin-top: 32px;">
+        <a href="login.html" class="btn btn-primary btn-block mobile-login-link">Login</a>
+      </div>
+    </div>
+  </div>
 
   <main>
     <section class="page-hero page-hero-plain">
@@ -94,7 +127,7 @@
           <span class="eyebrow">03 — Questions</span>
           <h2>Frequently <em>Asked</em></h2>
           <p class="faq-intro">Can't find what you're looking for? Our client advisors reply within one business day.</p>
-          <a href="about.html#contact" class="link-arrow">Ask a Question <i class="ph ph-arrow-right"></i></a>
+          <a href="contact.html" class="link-arrow">Ask a Question <i class="ph ph-arrow-right"></i></a>
         </div>
         <div class="faq-list reveal" style="--d:.1s">
           <details class="faq-item" open>
@@ -128,7 +161,7 @@
         <span class="eyebrow no-rule">We're Here to Help</span>
         <h2>Need Further <em>Assistance?</em></h2>
         <p>Our client advisors are on hand to help with orders, sizing, and care.</p>
-        <a href="about.html#contact" class="btn btn-light">Contact Client Services <i class="ph ph-arrow-right"></i></a>
+        <a href="contact.html" class="btn btn-light">Contact Client Services <i class="ph ph-arrow-right"></i></a>
       </div>
     </section>
   </main>
@@ -159,14 +192,14 @@
           <ul class="footer-links">
             <li><a href="services.html#shipping-returns">Shipping &amp; Returns</a></li>
             <li><a href="services.html">Care Guide</a></li>
-            <li><a href="about.html#contact">Contact Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-heading">Visit</h4>
           <ul class="footer-links">
             <li><a href="about.html">Florence, Italy</a></li>
-            <li><a href="about.html#contact">Private appointments</a></li>
+            <li><a href="contact.html">Private appointments</a></li>
           </ul>
         </div>
       </div>

@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us | Atelier Vell</title>
+  <title>Contact | Atelier Vell</title>
+  <meta name="description" content="Contact Atelier Vell client services, visit the Florence atelier or book a private appointment.">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -27,8 +28,8 @@
         </div>
         <a href="collections.html" class="nav-link">Collections</a>
         <a href="services.html" class="nav-link">Services</a>
-        <a href="about.html" class="nav-link active">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
         <a href="dashboard.html" class="nav-link">Dashboard</a>
       </nav>
       <div class="nav-actions">
@@ -75,78 +76,89 @@
   <main>
     <section class="page-hero page-hero-plain">
       <div class="container">
-        <span class="eyebrow fade-in-late">About the Maison</span>
+        <span class="eyebrow fade-in-late">Client Services</span>
         <h1 class="hero-title" style="font-size:clamp(3.5rem, 9vw, 8rem);">
-          <span class="line"><span>Our <em>Heritage</em></span></span>
+          <span class="line"><span>Get in <em>Touch</em></span></span>
         </h1>
-        <p class="fade-in-late">Atelier Vell was born from a desire to strip away the unnecessary, focusing entirely on structural integrity, exquisite materials, and masterful construction.</p>
+        <p class="fade-in-late">Questions about a piece, an order, or a private appointment at the Florence atelier, we're here to help.</p>
       </div>
     </section>
 
-    <section class="section container">
-      <div class="statement reveal">
-        <span class="eyebrow no-rule">Philosophy</span>
-        <p>Every stitch is considered. Every edge is hand-painted. The result is a piece that <em>transcends</em> seasonal trends.</p>
-      </div>
-    </section>
-
-    <section class="container" style="padding-bottom:var(--space-8);">
-      <div class="editorial-split">
-        <div class="reveal-img">
-          <img src="https://images.unsplash.com/photo-1524498250077-390f9e378fc0?auto=format&fit=crop&q=80&w=1000" alt="Hand-finished leather bag with contrast strap" loading="lazy">
-        </div>
+    <section id="contact" class="section container">
+      <div class="editorial-split" style="align-items:start;">
         <div class="reveal">
-          <span class="eyebrow">The Process</span>
-          <h2>Made by <em>hand</em>, slowly</h2>
-          <p>We work exclusively with multi-generational family tanneries in Tuscany, selecting only the finest full-grain leathers that develop a unique patina over time.</p>
-          <p>Each bag passes through the hands of a single artisan from cutting to final finishing, so every piece carries the signature of the person who made it.</p>
-          <a href="collections.html" class="link-arrow">View the Collections <i class="ph ph-arrow-right"></i></a>
+          <span class="eyebrow">Reach Us</span>
+          <h2>The <em>Atelier</em></h2>
+          <p>Our client advisors reply to every message within one business day.</p>
+          <ul class="care-list">
+            <li><i class="ph ph-map-pin"></i> Via de' Tornabuoni 12, 50123 Florence, Italy</li>
+            <li><i class="ph ph-envelope-simple"></i> <a href="mailto:care@ateliervell.com">care@ateliervell.com</a></li>
+            <li><i class="ph ph-phone"></i> <a href="tel:+390550000000">+39 055 000 0000</a></li>
+            <li><i class="ph ph-clock"></i> Mon – Sat, 10:00 – 19:00 CET</li>
+            <li><i class="ph ph-calendar-check"></i> Private appointments available on request</li>
+          </ul>
+
+          <div class="contact-follow">
+            <span class="form-label">Follow Us</span>
+            <div class="contact-socials">
+              <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+              <a href="#" aria-label="TikTok"><i class="ph ph-tiktok-logo"></i></a>
+              <a href="#" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+              <a href="#" aria-label="YouTube"><i class="ph ph-youtube-logo"></i></a>
+            </div>
+          </div>
         </div>
+
+        <form id="contact-form" class="reveal" action="https://formspree.io/f/placeholder" method="POST" onsubmit="event.preventDefault(); showToast('Thank you — your message has been sent.'); this.reset();">
+          <div class="contact-form-row">
+            <div class="form-group">
+              <label class="form-label" for="c-name">Name</label>
+              <input id="c-name" type="text" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="c-email">Email</label>
+              <input id="c-email" type="email" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-topic">Subject</label>
+            <select id="c-topic" class="form-control">
+              <option>Product enquiry</option>
+              <option>Order &amp; delivery</option>
+              <option>Care &amp; repair</option>
+              <option>Private appointment</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="c-msg">Message</label>
+            <textarea id="c-msg" class="form-control" rows="6" required style="resize:vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Send Message <i class="ph ph-arrow-right"></i></button>
+        </form>
       </div>
     </section>
 
-    <section class="container" style="padding-bottom:var(--space-8);">
-      <div class="section-header reveal">
-        <span class="eyebrow no-rule">The People</span>
-        <h2>Behind the <em>Maison</em></h2>
-        <p>Three disciplines, one bench — the hands and minds that shape every Atelier Vell piece.</p>
-      </div>
-      <div class="team-grid">
-        <article class="team-card reveal">
-          <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=700" alt="Portrait of Elena Vell" loading="lazy">
-          </div>
-          <span class="team-role">Founder &amp; Creative Director</span>
-          <h3>Elena Vell</h3>
-          <p>Trained in architecture before turning to leather, Elena draws every silhouette by hand and signs off each prototype herself.</p>
-        </article>
-        <article class="team-card reveal" style="--d:.1s">
-          <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=700" alt="Portrait of Marco Bellandi" loading="lazy">
-          </div>
-          <span class="team-role">Master Artisan</span>
-          <h3>Marco Bellandi</h3>
-          <p>Third-generation leatherworker from Florence. Marco leads the bench, teaching the hand-stitching and edge-painting our pieces are known for.</p>
-        </article>
-        <article class="team-card reveal" style="--d:.2s">
-          <div class="team-photo">
-            <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&q=80&w=700" alt="Portrait of Sofia Ricci" loading="lazy">
-          </div>
-          <span class="team-role">Head of Materials</span>
-          <h3>Sofia Ricci</h3>
-          <p>Sofia works directly with our Tuscan tanneries, selecting every hide by hand for grain, weight and the way it will age.</p>
-        </article>
-      </div>
-    </section>
-
+    <!-- Map -->
     <section class="section" style="background-color:var(--clr-white);">
-      <div class="container" style="max-width:640px; text-align:center;">
+      <div class="container">
         <div class="section-header reveal">
-          <span class="eyebrow no-rule">Client Services</span>
-          <h2>Get in <em>Touch</em></h2>
-          <p>Have a question about a piece or need assistance with an order?</p>
+          <span class="eyebrow no-rule">Visit the Atelier</span>
+          <h2>Find <em>Us</em></h2>
+          <p>In the heart of Florence, steps from Palazzo Strozzi.</p>
         </div>
-        <a href="contact.html" class="btn btn-primary reveal">Contact Us <i class="ph ph-arrow-right"></i></a>
+        <div class="contact-map reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Via+de'+Tornabuoni+12,+50123+Florence,+Italy&amp;output=embed"
+            title="Map showing the Atelier Vell boutique in Florence"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <div class="contact-map-cta reveal">
+          <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Via+de'+Tornabuoni+12,+50123+Florence,+Italy" target="_blank" rel="noopener" class="link-arrow">Get Directions <i class="ph ph-arrow-right"></i></a>
+        </div>
       </div>
     </section>
   </main>
